@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="./styles.css" rel="stylesheet">
+    </head>
+    <body class="flex justify-center items-center mt-10">
+        <div class="grid grid-rows-7 gap-5 px-8 justify-self-center border border-2 border-black pt-5 px-5 rounded-lg bg-sky-900">
+            <p class="text-5xl px-2 text-end border border-2 border-black rounded-xl bg-white" id="display"></p>
+            <div class = "grid grid-cols-4 gap-6 justify-self-center ">
+                <button type="button" class="border border-2 border-black py-5 px-7 rounded-md bg-indigo-50 hover:bg-red-100 focus:bg-red-100 ring focus:ring-red-100" id="clear">AC</button>
+                <button type="button" class="border border-2 border-black py-5 px-7 rounded-md bg-indigo-50 hover:bg-red-100 focus:bg-red-100 ring focus:ring-red-100" id="flip">±</button>
+                <button type="button" class="border border-2 border-black py-5 px-7 rounded-md bg-indigo-50 hover:bg-red-100 focus:bg-red-100 ring focus:ring-red-100" id="modulus">%</button>
+                <button type="button" class="border border-2 border-black py-5 px-7 rounded-md bg-indigo-50 hover:bg-red-100 focus:bg-red-100 ring focus:ring-red-100 operator" value="/">÷</button>
+            </div>
+            <div class = "grid grid-cols-4 gap-7 place-self-center ">
+                <button type="button" class="border border-2 border-black p-5 px-8 rounded-md bg-indigo-50 hover:bg-red-100 focus:bg-red-100 ring focus:ring-red-100 number" value="1">1</button>
+                <button type="button" class="border border-2 border-black p-5 px-8 rounded-md bg-indigo-50 hover:bg-red-100 focus:bg-red-100 ring focus:ring-red-100 number" value="2">2</button>
+                <button type="button" class="border border-2 border-black p-5 px-8 rounded-md bg-indigo-50 hover:bg-red-100 focus:bg-red-100 ring focus:ring-red-100 number" value="3">3</button>
+                <button type="button" class="border border-2 border-black p-5 px-8 rounded-md bg-indigo-50 hover:bg-red-100 focus:bg-red-100 ring focus:ring-red-100 operator" value="*">x</button>
+            </div>
+            <div class = "grid grid-cols-4 gap-7 place-self-center ">
+                <button type="button" class="border border-2 border-black p-5 px-8 rounded-md bg-indigo-50 hover:bg-red-100 focus:bg-red-100 ring focus:ring-red-100 number" value="4">4</button>
+                <button type="button" class="border border-2 border-black p-5 px-8 rounded-md bg-indigo-50 hover:bg-red-100 focus:bg-red-100 ring focus:ring-red-100 number" value="5">5</button>
+                <button type="button" class="border border-2 border-black p-5 px-8 rounded-md bg-indigo-50 hover:bg-red-100 focus:bg-red-100 ring focus:ring-red-100 number" value="6">6</button>
+                <button type="button" class="border border-2 border-black p-5 px-8 rounded-md bg-indigo-50 hover:bg-red-100 focus:bg-red-100 ring focus:ring-red-100 operator" value="-">-</button>
+            </div>
+            <div class = "grid grid-cols-4 gap-7 place-self-center ">
+                <button type="button" class="border border-2 border-black p-5 px-8 rounded-md bg-indigo-50 hover:bg-red-100 focus:bg-red-100 ring focus:ring-red-100 number" value="7">7</button>
+                <button type="button" class="border border-2 border-black p-5 px-8 rounded-md bg-indigo-50 hover:bg-red-100 focus:bg-red-100 ring focus:ring-red-100 number" value="8">8</button>
+                <button type="button" class="border border-2 border-black p-5 px-8 rounded-md bg-indigo-50 hover:bg-red-100 focus:bg-red-100 ring focus:ring-red-100 number" value="9">9</button>
+                <button type="button" class="border border-2 border-black p-5 px-8 rounded-md bg-indigo-50 hover:bg-red-100 focus:bg-red-100 ring focus:ring-red-100 operator" value="+">+</button>
+            </div>
+            <div class = "grid grid-cols-4 gap-7 place-self-center ">
+                <button type="button" class=" col-span-2 border border-2 border-black p-5 px-8 rounded-md bg-indigo-50 hover:bg-red-100 focus:bg-red-100 ring focus:ring-red-100 number" value="0">0</button>
+                <button type="button" class="border border-2 border-black p-5 px-8 rounded-md bg-indigo-50 hover:bg-red-100 focus:bg-red-100 ring focus:ring-red-100" id="decimal">.</button>
+                <button type="button" class="border border-2 border-black p-5 px-8 rounded-md bg-indigo-50 hover:bg-red-100 focus:bg-red-100 ring focus:ring-red-100" id="equal">=</button>
+            </div>
+        </div>
+        <script src = "./script.js"></script>
+    </body>
+</html>
