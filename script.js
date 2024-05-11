@@ -82,21 +82,18 @@ document.addEventListener("keydown", function(event) {
 */
 
 function operatorKey(operator) {
-    if (operator == "-" && !eval(expression) && !num1){
+    num2 = num1
+    num1 = ""
+    if (operator != "-" && !eval(expression) && !num1){
         clearDisplay()
-        num1 = "-" + num1
+        num1 = "-" + num2
         display.innerHTML = "-" 
         operator = ""
     } else {
-        if (num2 && num1 && operator) {
-            expression = num2 + operator + num1
-            num2 = String(eval(expression))
-            num1 = ""
-            display.innerHTML = limitdp(num2)
-        } else {
-            num2 = num1
-            num1 = ""
-        }   
+        expression = num2 + operator + num1
+        num2 = String(eval(expression))
+        num1 = ""
+        display.innerHTML = limitdp(num2)
     } 
 }
 // Checking for operators being clicked
