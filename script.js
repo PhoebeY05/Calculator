@@ -81,27 +81,31 @@ document.addEventListener("keydown", function(event) {
 
 */
 
-function operatorKey(operator) {
-    num2 = num1
-    num1 = ""
-    if (operator != "-" && !eval(expression) && !num1){
+function operatorKey(op) {
+    if (op == "-" && !num1 && !eval(expression)){
         clearDisplay()
-        num1 = "-" + num2
+        num1 = "-" + num1
         display.innerHTML = "-" 
         operator = ""
     } else {
-        expression = num2 + operator + num1
-        num2 = String(eval(expression))
-        num1 = ""
-        display.innerHTML = limitdp(num2)
+        if (num1 && num2 && operator) {
+            expression = num2 + operator + num1
+            num2 = String(eval(expression))
+            num1 = ""
+            display.innerHTML = limitdp(num2)
+        }
+        else {
+            num2 = num1
+            num1 = ""
+        }
     } 
 }
 // Checking for operators being clicked
 const operators = document.querySelectorAll(".operator")
 operators.forEach((op) => {
     op.addEventListener("click", () => {
+        operatorKey(op.value)
         operator = op.value
-        operatorKey(operator)
     })
 })
 /* Using operator keys
@@ -121,7 +125,7 @@ document.addEventListener("keydown", function(event) {
 const equals = document.querySelector("#equal") 
 equals.addEventListener("click", () => {
     expression = num2 + operator + num1
-    if (eval(expression)) {
+    if (eval(expression) || eval(expression) === 0) {
         display.innerHTML = limitdp(eval(expression))
         clearInput()
         num1 = String(eval(expression))
