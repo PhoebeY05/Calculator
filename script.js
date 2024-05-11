@@ -147,7 +147,7 @@ clear.addEventListener("click", () => {
 //Checking for plus minus button being clicked
 const sign = document.querySelector("#flip") 
 sign.addEventListener("click", () => {
-    if (display.innerHTML === num1 && !num1){
+    if (display.innerHTML === num1 && num1){
         num1 = flip(num1)
     } else {
         clearInput()
