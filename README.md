@@ -1,7 +1,7 @@
-# Calculator
-## Description
-Calculator app similar to iPhone calculator without advanced features
+# Calculator [![wakatime](https://wakatime.com/badge/user/018e18e4-ea39-46c6-b3da-dcbf7a45a702/project/fd1aff2d-1626-44a3-83bf-ba12c301f606.svg)](https://wakatime.com/badge/user/018e18e4-ea39-46c6-b3da-dcbf7a45a702/project/fd1aff2d-1626-44a3-83bf-ba12c301f606)
 
+## Description
+Calculator app similar to iPhone calculator without advanced features 
 Visit at https://phoebey05.github.io/Calculator/
 
 ### How to use?
